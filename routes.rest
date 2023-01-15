@@ -1,0 +1,67 @@
+// LOCALHOST 
+### 
+GET http://localhost:8080/contacts 
+
+### 
+GET http://localhost:8080/contacts/63ba2c1898a0c4386448e05d
+
+// PRODUCTION Deploy 
+### 
+GET https://chase-week03-ind.onrender.com/contacts
+
+### 
+GET https://chase-week03-ind.onrender.com/contacts/63ba2c1898a0c4386448e05d
+
+###
+POST http://localhost:8080/contacts HTTP/1.1
+content-type: application/json
+
+{
+    "firstName":"Ben",
+    "lastName":"Perry",
+    "email":"killthemagefirst@gmail.com",
+    "favoriteColor":"Orange",
+    "birthday":"11/07/1996"
+}
+
+###
+POST https://chase-week03-ind.onrender.com/contacts HTTP/1.1
+content-type: application/json
+
+{
+    "firstName":"JP",
+    "lastName":"Patterson",
+    "email":"jppatterson@gmail.com",
+    "favoriteColor":"Red",
+    "birthday":"06/15/1995"
+}
+
+###
+PUT http://localhost:8080/contacts/63ba2c1898a0c4386448e05f HTTP/1.1
+content-type: application/json
+
+{
+    "firstName":"Chase",
+    "lastName":"Patterson",
+    "email":"chase.doug88@gmail.com",
+    "favoriteColor":"Blue",
+    "birthday":"04/09/1997"
+}
+
+###
+PUT https://chase-week03-ind.onrender.com/contacts/63ba2c1898a0c4386448e05e HTTP/1.1
+content-type: application/json
+
+{
+    "firstName":"Paulina",
+    "lastName":"Rugerio",
+    "email":"ladyfromla@test.com",
+    "favoriteColor":"Purple",
+    "birthday":"05/05/1997"
+}
+
+###
+ DELETE http://localhost:8080/contacts/(id goes here) HTTP/1.1
+
+###
+ DELETE https://chase-week03-ind.onrender.com/contacts/(id goes here) HTTP/1.1
