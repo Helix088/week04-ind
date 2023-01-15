@@ -7,10 +7,10 @@ GET http://localhost:8080/contacts/63ba2c1898a0c4386448e05d
 
 // PRODUCTION Deploy 
 ### 
-GET https://chase-week04-ind.onrender.com/contacts
+GET https://chase-week04-ind.onrender.com/contacts HTTP/1.1 content-type: application/json
 
 ### 
-GET https://chase-week04-ind.onrender.com/contacts/63ba2c1898a0c4386448e05d
+GET https://chase-week04-ind.onrender.com/contacts/63ba2c1898a0c4386448e05d HTTP/1.1 content-type: application/json
 
 ###
 POST http://localhost:8080/contacts HTTP/1.1 content-type: application/json
