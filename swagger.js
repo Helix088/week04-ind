@@ -5,8 +5,8 @@ const doc = {
     title: "Chase's Contact API",
     description: "Contact API",
   },
-  host: "https://chase-week04-ind.onrender.com",
-  schemes: ["https"],
+  host: "chase-week04-ind.onrender.com",
+  schemes: ["http"],
 };
 
 const outputFile = './swagger.json';
