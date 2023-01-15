@@ -1,15 +1,21 @@
-const swaggerAutogen = require("swagger-autogen")();
+const swaggerAutogen = require('swagger-autogen')();
 
 const doc = {
   info: {
-    title: "My API",
-    description: "Description",
+    title: "Chase's Contact API",
+    description: "Contact API",
   },
-  host: "localhost:3000",
-  schemes: ["http"],
+  host: "localhost:8080",
+  schemes: ["https"],
 };
 
-const outputFile = "./path/swagger-output.json";
-const endpointsFiles = ["./path/endpointsUser.js", "./path/endpointsBook.js"];
+const outputFile = './swagger.json';
+const endpointsFiles = ['./routes/index.js'];
 
+// generate swagger.json
 swaggerAutogen(outputFile, endpointsFiles, doc);
+
+// Run server after it gets generated
+// swaggerAutogen(outputFile, endpointsFiles, doc).then(async () => {
+//   await import('./index.js');
+// });

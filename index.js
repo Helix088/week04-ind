@@ -4,9 +4,6 @@ const mongodb = require("./db/connect");
 
 const port = process.env.PORT || 8080;
 const app = express();
-
-const swaggerUi = require("swagger-ui-express");
-const swaggerDocument = require("./swagger.json");
  
 app
   .use(bodyParser.json())
@@ -14,8 +11,7 @@ app
     res.setHeader("Access-Control-Allow-Origin", "*");
     next();
   })
-  .use("/", require("./routes"))
-  .use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+  .use("/", require("./routes"));
 
 mongodb.initDb((err, mongodb) => {
   if (err) {
