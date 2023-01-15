@@ -5,7 +5,7 @@
     "description": "Contact API",
     "version": "1.0.0"
   },
-  "host": "https://chase-week04-ind.onrender.com",
+  "host": "chase-week04-ind.onrender.com",
   "basePath": "/",
   "schemes": [
     "https"
