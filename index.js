@@ -5,8 +5,8 @@ const mongodb = require("./db/connect");
 const port = process.env.PORT || 8080;
 const app = express();
 
-const swaggerUi = require('swagger-ui-express');
-const swaggerDocument = require('./swagger.json');
+const swaggerUi = require("swagger-ui-express");
+const swaggerDocument = require("./swagger.json");
  
 app
   .use(bodyParser.json())
@@ -15,7 +15,7 @@ app
     next();
   })
   .use("/", require("./routes"))
-  .use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+  .use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 mongodb.initDb((err, mongodb) => {
   if (err) {
