@@ -6,7 +6,8 @@
   "repository": "https://github.com/Helix088/week03-ind.git",
   "scripts": {
     "start": "node index.js",
-    "dev-start": "nodemon index.js"
+    "dev-start": "nodemon index.js",
+    "swagger-autogen": "node ./swagger.js"
   },
   "author": "Chase Patterson",
   "license": "ISC",
@@ -19,5 +20,8 @@
   },
   "engines": {
     "node": ">=14"
+  },
+  "devDependencies": {
+    "swagger-autogen": "^2.22.0"
   }
 }
