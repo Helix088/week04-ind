@@ -61,7 +61,7 @@ content-type: application/json
 }
 
 ###
- DELETE http://localhost:8080/contacts/63c391e9c26c21195f076bc4 HTTP/1.1 content-type: application/json
+ DELETE http://localhost:8080/contacts/(id goes here) HTTP/1.1 content-type: application/json
 
 ###
- DELETE https://chase-week04-ind.onrender.com/contacts/63c3921655ea8465e666c796 HTTP/1.1 content-type: application/json
+ DELETE https://chase-week04-ind.onrender.com/contacts/(id goes here) HTTP/1.1 content-type: application/json
